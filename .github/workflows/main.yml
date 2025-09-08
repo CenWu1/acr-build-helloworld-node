@@ -16,7 +16,7 @@ jobs:
             environment: AzureChinaCloud
             
         - name: 'Debug Azure Context'
-        - run: |
+          run: |
             set -e
             echo "== Cloud =="
             az cloud show
