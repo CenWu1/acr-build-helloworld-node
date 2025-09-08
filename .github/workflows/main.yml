@@ -63,8 +63,8 @@ jobs:
               --registry-login-server ${{ secrets.REGISTRY_LOGIN_SERVER }} \
               --registry-username ${{ secrets.REGISTRY_USERNAME }} \
               --registry-password ${{ secrets.REGISTRY_PASSWORD }} \
-              --ports 80
-              --cpu 1
+              --ports 80 \
+              --cpu 1 \
               --memory 1
             az container show -g ${{ secrets.RESOURCE_GROUP }} -n aci-sampleapp-cli -o 
 
