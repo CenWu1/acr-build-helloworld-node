@@ -15,8 +15,8 @@ jobs:
             creds: ${{ secrets.AZURE_CREDENTIALS }}
             environment: AzureChinaCloud
             
-         - name: Debug Azure Context
-          run: |
+        - name: 'Debug Azure Context'
+        - run: |
             set -e
             echo "== Cloud =="
             az cloud show
