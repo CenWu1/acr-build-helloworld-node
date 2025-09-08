@@ -14,6 +14,17 @@ jobs:
           with:
             creds: ${{ secrets.AZURE_CREDENTIALS }}
             environment: AzureChinaCloud
+            
+         - name: Debug Azure Context
+          run: |
+            set -e
+            echo "== Cloud =="
+            az cloud show
+            echo "== Subscriptions visible to this SP =="
+            az account list --all -o table
+            echo "== Current account =="
+            az account show
+            echo "== SP object (by clientId) =="
 
         - name: 'Build and push image'
           uses: azure/docker-login@v1
@@ -36,3 +47,4 @@ jobs:
             registry-password: ${{ secrets.REGISTRY_PASSWORD }}
             name: aci-sampleapp
             location: 'China East 2'
+            subscription-id: 07d1a987-0258-4086-800b-550fdd074fcd   # ← 新增
