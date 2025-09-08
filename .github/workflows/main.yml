@@ -46,5 +46,4 @@ jobs:
             registry-username: ${{ secrets.REGISTRY_USERNAME }}
             registry-password: ${{ secrets.REGISTRY_PASSWORD }}
             name: aci-sampleapp
-            location: 'China East 2'
-            subscription-id: 07d1a987-0258-4086-800b-550fdd074fcd   # ← 新增
+            location: 'chinaeast2'
